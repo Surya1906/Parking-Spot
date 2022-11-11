@@ -15,6 +15,10 @@ import News from './icons/News'
 import Close from './icons/Close'
 import Search from './icons/Search'
 import LocateMe from './icons/LocateMe'
+import Home from './icons/Home'
+import LocationPin from './icons/LocationPin'
+import ChargingPin from './icons/ChargingPin'
+import DropDown from './icons/DropDown'
 
 export {
   VRLogo,
@@ -34,4 +38,8 @@ export {
   Close,
   Search,
   LocateMe,
+  Home,
+  LocationPin,
+  ChargingPin,
+  DropDown,
 }

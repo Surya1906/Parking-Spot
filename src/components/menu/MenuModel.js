@@ -1,22 +1,16 @@
 import React from 'react'
-import {
-  Box,
-  Button,
-  ScrollView,
-  Text,
-  Center,
-  VStack,
-  Heading,
-  HStack,
-  Pressable,
-  Flex,
-} from 'native-base'
+import { Box, Text, Heading, HStack, Pressable, Flex } from 'native-base'
 import { Link } from 'react-router-dom'
-import { Location, Wallet, Product, News, Close } from '../../assets'
+import { Location, Wallet, Product, News, Close, Home } from '../../assets'
 
 const MenuModel = (props) => {
   const { modalVisible, setModalVisible } = props
   const data = [
+    {
+      icon: <Home />,
+      title: 'Home',
+      goto: '/home',
+    },
     {
       icon: <Location />,
       title: 'Navigate',
@@ -70,7 +64,7 @@ const MenuModel = (props) => {
           </Pressable>
         </Flex>
         {data.map((item) => (
-          <Link to='/' style={{ textDecoration: 'none' }}>
+          <Link to={item.goto} style={{ textDecoration: 'none' }}>
             <Pressable>
               {({ isPressed }) => {
                 return (
